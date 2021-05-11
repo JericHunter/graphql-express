@@ -46,4 +46,14 @@ const root = {
         petList.splice(id, 1);
 
         return pet;
+    },
+    getTime: () => {
+        return {
+            hour: new Date().getHours().toString() - 12,
+            minute: new Date().getMinutes().toString(),
+            second: new Date().getSeconds().toString(),
+        };
     }
+    getRandom: ({ range }) => {
+        return Math.floor(Math.random() * range);
+    },
